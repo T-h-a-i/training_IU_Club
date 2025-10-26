@@ -1,0 +1,17 @@
+def tim_khoang_cach_nho_nhat(mang):
+    da_giap = {}  
+    khoang_cach_nho_nhat = -1  
+    for chi_so, gia_tri in enumerate(mang):
+        if gia_tri in da_giap:  
+            khoang_cach = chi_so - da_giap[gia_tri]  
+            if khoang_cach_nho_nhat == -1 or khoang_cach < khoang_cach_nho_nhat:  
+                khoang_cach_nho_nhat = khoang_cach
+        da_giap[gia_tri] = chi_so  
+    
+    return khoang_cach_nho_nhat  
+
+so_phan_tu = int(input("Nhập số lượng phần tử n: "))  
+mang = list(map(int, input("Nhập dãy số có n so_phan_tu: ").split()))  
+
+
+print(tim_khoang_cach_nho_nhat(mang))
