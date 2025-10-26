@@ -1,0 +1,6 @@
+def kiem_tra_3_so(a, b, c):
+    if a + b == c or a + c == b or b + c == a:
+        return "Yes"
+    return "No"
+so1, so2, so3 = map(int, input("Nhập 3 số: ").split())
+print(kiem_tra_3_so(so1, so2, so3))
