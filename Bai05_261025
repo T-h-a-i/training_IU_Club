@@ -1,0 +1,10 @@
+def tinh_tong(mang, n, l, r):
+    tong_don = [0] * (n + 1)
+    for i in range(1, n + 1):
+        tong_don[i] = tong_don[i - 1] + mang[i - 1]
+    return tong_don[r] - tong_don[l - 1]
+n, q = map(int, input().split())  
+mang = list(map(int, input().split())) 
+for _ in range(q):
+    l, r = map(int, input().split()) 
+    print(tinh_tong(mang, n, l, r))
