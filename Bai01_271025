@@ -1,0 +1,17 @@
+def process_test_case(n, a, b):
+    a.sort() 
+    b.sort() 
+    
+    for i in range(n):
+        if a[i] > b[i]:  
+            return "NO"
+    return "YES"
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input()) 
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split())) 
+    
+    print(process_test_case(n, a, b))
