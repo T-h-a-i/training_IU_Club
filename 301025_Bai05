@@ -1,0 +1,16 @@
+import math
+results = []
+t = int(input())
+for _ in range(t):
+    s = input().strip()
+    x = s[::-1]
+    a = int(s)
+    b = int(x)
+    if s[-1] == '0':
+        results.append("YES")
+    elif math.gcd(a, b) == 1:
+        results.append("YES")
+    else:
+        results.append("NO")
+for res in results:
+    print(res)
